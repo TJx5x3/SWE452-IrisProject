@@ -9,7 +9,7 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
 
 class TestIrisPipeline(unittest.TestCase):
-    def setUp(self):
+    def __init__(self):
         self.iris = load_iris()
         self.X = self.iris.data # X is uppercase bc X is a matrix, y is a vector
         self.y = self.iris.target
